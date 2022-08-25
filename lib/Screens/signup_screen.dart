@@ -1,19 +1,14 @@
-import 'dart:async';
-import 'dart:ui';
-
 import 'package:financial_app/Screens/dashboard_screen.dart';
-import 'package:financial_app/Screens/signup_screen.dart';
+import 'package:financial_app/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class SignUpScreen extends StatefulWidget {
 
   @override
-  State<LoginScreen> createState() => InitState();
+  State <StatefulWidget> createState() =>  InitState();
 }
 
-class InitState extends State<LoginScreen> {
-  @override
- 
+class  InitState extends State <SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return initWidget();
@@ -26,7 +21,7 @@ class InitState extends State<LoginScreen> {
         child: Column(
           children: [
             Container(
-          height: 300,
+          height: 200,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(90)
@@ -46,11 +41,11 @@ class InitState extends State<LoginScreen> {
               children: [
                 Container(
                   child: Image.asset('assets/images/hand_logot.png'),
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                 ),
                 Container(
-                  child: Text('Login',
+                  child: Text('Register',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
@@ -62,9 +57,52 @@ class InitState extends State<LoginScreen> {
             ),
           ),
         ),
+
+//the input for the form
         Container(
-          margin: EdgeInsets.only(left: 20, right: 20, top: 90),
-          padding: EdgeInsets.only(left: 20, right: 20),
+          margin: EdgeInsets.only(
+            left: 20, 
+            right: 20, 
+            top: 40
+            ),
+          padding: EdgeInsets.only(
+            left: 20, 
+            right: 20
+            ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: Colors.grey[200],
+            boxShadow: [BoxShadow(
+              offset: Offset(0, 10),
+              blurRadius: 50,
+              color: Color(0xffEEEEEE)
+            )]
+          ),
+          alignment: Alignment.center,
+          child: TextField(
+            cursorColor: Color.fromARGB(255, 0, 68, 255),
+            decoration: InputDecoration(
+              icon: Icon(
+                Icons.person,
+                color: Color.fromARGB(255, 0, 68, 255),
+              ),
+              hintText: "Full Names",
+              enabledBorder: InputBorder.none,
+              focusedBorder: InputBorder.none
+            ),
+          ),
+        ),
+
+ Container(
+          margin: EdgeInsets.only(
+            left: 20, 
+            right: 20, 
+            top: 20
+            ),
+          padding: EdgeInsets.only(
+            left: 20, 
+            right: 20
+            ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
             color: Colors.grey[200],
@@ -90,9 +128,16 @@ class InitState extends State<LoginScreen> {
         ),
 
 
-        Container(
-          margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-          padding: EdgeInsets.only(left: 20, right: 20),
+ Container(
+          margin: EdgeInsets.only(
+            left: 20, 
+            right: 20, 
+            top: 20
+            ),
+          padding: EdgeInsets.only(
+            left: 20, 
+            right: 20
+            ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
             color: Colors.grey[200],
@@ -103,7 +148,41 @@ class InitState extends State<LoginScreen> {
             )]
           ),
           alignment: Alignment.center,
-          
+          child: TextField(
+            cursorColor: Color.fromARGB(255, 0, 68, 255),
+            decoration: InputDecoration(
+              icon: Icon(
+                Icons.phone,
+                color: Color.fromARGB(255, 0, 68, 255),
+              ),
+              hintText: "Phone Number",
+              enabledBorder: InputBorder.none,
+              focusedBorder: InputBorder.none
+            ),
+          ),
+        ),
+
+
+ Container(
+          margin: EdgeInsets.only(
+            left: 20, 
+            right: 20, 
+            top: 20
+            ),
+          padding: EdgeInsets.only(
+            left: 20, 
+            right: 20
+            ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: Colors.grey[200],
+            boxShadow: [BoxShadow(
+              offset: Offset(0, 10),
+              blurRadius: 50,
+              color: Color(0xffEEEEEE)
+            )]
+          ),
+          alignment: Alignment.center,
           child: TextField(
             obscureText: true,
             cursorColor: Color.fromARGB(255, 0, 68, 255),
@@ -118,24 +197,51 @@ class InitState extends State<LoginScreen> {
             ),
           ),
         ),
-        Container(
-          margin: EdgeInsets.only(top: 20, right: 20),
-          alignment: Alignment.centerRight,
-          child: GestureDetector(
-            child: Text('Forget Password?'),
-            onTap: () =>{
-             //what happen when forget password
-            },
+
+
+ Container(
+          margin: EdgeInsets.only(
+            left: 20, 
+            right: 20, 
+            top: 20
+            ),
+          padding: EdgeInsets.only(
+            left: 20, 
+            right: 20
+            ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: Colors.grey[200],
+            boxShadow: [BoxShadow(
+              offset: Offset(0, 10),
+              blurRadius: 50,
+              color: Color(0xffEEEEEE)
+            )]
+          ),
+          alignment: Alignment.center,
+          child: TextField(
+            obscureText: true,
+            cursorColor: Color.fromARGB(255, 0, 68, 255),
+            decoration: InputDecoration(
+              icon: Icon(
+                Icons.vpn_key,
+                color: Color.fromARGB(255, 0, 68, 255),
+              ),
+              hintText: "Confirm Password",
+              enabledBorder: InputBorder.none,
+              focusedBorder: InputBorder.none
+            ),
           ),
         ),
 
-        GestureDetector(
+
+         GestureDetector(
           onTap: () =>{
-            Navigator.push(context, MaterialPageRoute(
+             Navigator.push(context, MaterialPageRoute(
                     builder: (context) => DashboardScreen())),
           },
           child: Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+            margin: EdgeInsets.only(left: 20, right: 20, top: 40),
             padding: EdgeInsets.only(left: 20, right: 20),
             alignment: Alignment.center,
             height: 54,
@@ -156,7 +262,7 @@ class InitState extends State<LoginScreen> {
             ),
 
             child: Text(
-              'LOGIN',
+              'Register',
               style: TextStyle(
                 color: Colors.white
               ),
@@ -164,20 +270,22 @@ class InitState extends State<LoginScreen> {
           ),
         ),
 
-        Container(
+
+
+ Container(
           margin: EdgeInsets.only(top: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Don\'t have account? '),
+              Text('Already have account? '),
               GestureDetector(
                 onTap: () =>{
                   Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => SignUpScreen())
+                    builder: (context) => LoginScreen())
                     ),
                 },
                 child: Text(
-                  'Register',
+                  'Login',
                   style: TextStyle(
                     color: Color.fromARGB(255, 0, 68, 255),
                     ),
@@ -186,6 +294,7 @@ class InitState extends State<LoginScreen> {
             ],
           ),
         ),
+
           ],
         ) 
       ),
