@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:financial_app/Screens/dashboard_screen.dart';
 import 'package:financial_app/Screens/signup_screen.dart';
+import 'package:financial_app/widget_tree.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -132,7 +133,7 @@ class InitState extends State<LoginScreen> {
         GestureDetector(
           onTap: () =>{
             Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => DashboardScreen())),
+                    builder: (context) => WidgetTree())),
           },
           child: Container(
             margin: EdgeInsets.only(left: 20, right: 20, top: 20),
