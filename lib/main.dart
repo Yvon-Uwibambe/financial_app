@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
       title: 'book keeper',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        // scaffoldBackgroundColor: Constants.pupleDark,
-        // canvasColor: Constants.purpleLight
+        scaffoldBackgroundColor: Constants.pupleDark,
+        canvasColor: Constants.purpleLight
       ),
       home: SplashScreen(),
     );
