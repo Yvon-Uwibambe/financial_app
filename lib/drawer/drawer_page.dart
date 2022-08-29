@@ -17,6 +17,13 @@ class ButtonsInfo{
 int _currentIndex = 0;
 List<ButtonsInfo> _buttonNames = [
   ButtonsInfo(title: "Home", icon: Icons.home),
+  ButtonsInfo(title: "Setting", icon: Icons.settings),
+  ButtonsInfo(title: "Notification", icon: Icons.notifications),
+  ButtonsInfo(title: "Contacts", icon: Icons.contact_phone_rounded),
+  ButtonsInfo(title: "Sales", icon: Icons.sell),
+  ButtonsInfo(title: "Marketing", icon: Icons.mark_email_read),
+  ButtonsInfo(title: "Security", icon: Icons.verified_user),
+  ButtonsInfo(title: "Users", icon: Icons.supervised_user_circle_rounded),
 ];
 
 class _DrawerPageState extends State<DrawerPage> {
@@ -87,7 +94,11 @@ class _DrawerPageState extends State<DrawerPage> {
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),
-                    )
+                    ),
+                    Divider(
+                      color: Colors.white,
+                      thickness: 0.1,
+                    ),
                   ],
                 ),
                 ),

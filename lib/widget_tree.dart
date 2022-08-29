@@ -1,3 +1,6 @@
+import 'package:financial_app/Screens/panel_center/panel_center_page.dart';
+import 'package:financial_app/Screens/panel_left/panel_left_page.dart';
+import 'package:financial_app/Screens/panel_right/panel_right_page.dart';
 import 'package:financial_app/drawer/drawer_page.dart';
 import 'package:financial_app/responsive_layout.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +23,22 @@ class _WidgetTreeState extends State<WidgetTree> {
         ),
         body: ResponsiveLayout(
           tiny: Container(),
-          phone: Container(),
-          tablet: Container(),
-          largeTablet: Container(),
-          computer: Container(),
+          phone: PanelCenterPage(),
+          tablet: Row(children: [
+            Expanded(child: PanelLeftPage(),),
+            Expanded(child: PanelCenterPage(),),
+          ],),
+          largeTablet: Row(children: [
+            Expanded(child: PanelLeftPage(),),
+            Expanded(child: PanelCenterPage(),),
+            Expanded(child: PanelRightPage(),),
+          ],),
+          computer: Row(children: [
+            Expanded(child: DrawerPage(),),
+            Expanded(child: PanelLeftPage(),),
+            Expanded(child: PanelCenterPage(),),
+            Expanded(child: PanelRightPage(),),
+          ],),
         ),
         drawer: DrawerPage(),
     );
