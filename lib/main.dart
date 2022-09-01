@@ -1,6 +1,7 @@
 import 'package:financial_app/Screens/splash_screen.dart';
 import 'package:financial_app/constants.dart';
 import 'package:flutter/material.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,10 +11,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'book keeper',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Constants.pupleDark,
-        canvasColor: Constants.purpleLight
-      ),
+          primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: Constants.pupleDark,
+          canvasColor: Constants.purpleLight),
       home: SplashScreen(),
     );
   }
